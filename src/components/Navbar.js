@@ -1,39 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        {/* Brand Logo */}
-        <a className="navbar-brand" href="#">
-          <img src="/images/logo2.png" alt="Joene's Logo" style={{ height: '50px' }} />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav ms-auto">
-            <a className="nav-link btn" href="/images/Joene Tuban Resume.pdf" download>
-              Download Resume
-            </a>
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#projects">Project</a>
-            <a className="nav-link" href="#tools">Tools</a>
-            <a className="nav-link" href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
+    const [menuActive, setMenuActive] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        // Load the user's preference from localStorage
+        const savedMode = localStorage.getItem('darkMode') === 'true';
+        setDarkMode(savedMode);
+    }, []);
+
+    useEffect(() => {
+        // Save the user's preference to localStorage and toggle dark mode class
+        localStorage.setItem('darkMode', darkMode);
+        document.documentElement.classList.toggle('dark', darkMode);
+    }, [darkMode]);
+
+    const toggleMenu = () => {
+        setMenuActive(!menuActive);
+    };
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+    };
+
+    return (
+        <header className="navbar">
+            <div className="navbar-brand">
+                <a>
+                    <img src="/images/logo2.png" alt="My Logo" className="navbar-logo" />
+                </a>
+            </div>
+
+            <nav className={`navbar-menu ${menuActive ? 'active' : ''}`}>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tools">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div className="navbar-social">
+                <a href="#"><i className="fab fa-facebook"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+            </div>
+            <div className="navbar-actions">
+                <button className="navbar-toggle" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+                    {darkMode ? '🌙' : '☀️'}
+                </button>
+            </div>
+        </header>
+    );
 };
 
 export default Navbar;

@@ -1,107 +1,75 @@
-import React, { useEffect } from 'react';
-import './Tools.css';
+import React from "react";
 
 const tools = [
   {
     id: 1,
-    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png",
-    altText: "HTML5",
-    title: "HTML5",
-    description: "Building the structure of web pages with semantic elements."
+    imgSrc:
+      "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+    size: "col-span-2 row-span-2",
   },
   {
     id: 2,
-    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png",
-    altText: "CSS3",
-    title: "CSS3",
-    description: "Styling web pages with modern layouts and animations."
+    imgSrc:
+      "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+    size: "col-span-1 row-span-1",
   },
   {
     id: 3,
-    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    altText: "JavaScript",
-    title: "JavaScript",
-    description: "Adding interactivity and dynamic behavior to web pages."
+    imgSrc:
+      "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
+    size: "col-span-1 row-span-2",
   },
   {
     id: 4,
-    imgSrc: "/images/react.png",
-    altText: "React",
-    title: "React",
-    description: "A library for building user interfaces and single-page applications."
+    imgSrc:
+      "https://download.logo.wine/logo/React_(web_framework)/React_(web_framework)-Logo.wine.png",
+    size: "col-span-2 row-span-1",
   },
   {
     id: 5,
-    imgSrc: "/images/node.png",
-    altText: "Node.js",
-    title: "Node.js",
-    description: "JavaScript runtime for building scalable network applications."
+    imgSrc: "https://logowik.com/content/uploads/images/git6963.jpg",
+    size: "col-span-1 row-span-1",
   },
   {
     id: 6,
-    imgSrc: "/images/express.png",
-    altText: "Express",
-    title: "Express.js",
-    description: "Lightweight framework for building Node.js APIs and web apps."
+    imgSrc:
+      "https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdxy1c2bvl6odeo52dodk.jpg",
+    size: "col-span-2 row-span-2",
   },
   {
     id: 7,
-    imgSrc: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
-    altText: "MongoDB",
-    title: "MongoDB",
-    description: "NoSQL database for storing data in a flexible, JSON-like format."
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    size: "col-span-1 row-span-1",
   },
   {
     id: 8,
-    imgSrc: "/images/sql.png",
-    altText: "SQL",
-    title: "SQL",
-    description: "Structured Query Language for managing relational databases."
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+    size: "col-span-1 row-span-1",
   },
   {
     id: 9,
-    imgSrc: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    altText: "GitHub",
-    title: "GitHub",
-    description: "Version control and collaboration platform for code repositories."
-  }
+    imgSrc: "https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png",
+    size: "col-span-2 row-span-1",
+  },
 ];
 
 const ToolsSection = () => {
-  useEffect(() => {
-    const toolItems = document.querySelectorAll('.tool-item');
-
-    const observerOptions = {
-      root: null, 
-      threshold: 0.1 
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); 
-        }
-      });
-    }, observerOptions);
-
-    toolItems.forEach(item => {
-      observer.observe(item);
-    });
-  }, []);
-
   return (
-    <section id="tools" className="tools-section">
-      <div className="container">
-        <h2 className="section-heading text-center mb-4">Tools & Technologies</h2>
-        <div className="row">
-          {tools.map(({ id, imgSrc, altText, title, description }) => (
-            <div key={id} className="col-md-4 mb-4">
-              <div className="tool-item text-center">
-                <img src={imgSrc} alt={altText} className="img-fluid mb-3" style={{ height: '60px' }} />
-                <h4>{title}</h4>
-                <p>{description}</p>
-              </div>
+    <section id="tools" className="bg-white dark:bg-gray-900 py-10 h-screen">
+      <div className="container mx-auto px-4 h-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 h-full">
+          {tools.map((tool) => (
+            <div
+              key={tool.id}
+              className={`relative group overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-transform transform hover:scale-105 ${tool.size}`}
+            >
+              <img
+                src={tool.imgSrc}
+                alt={`Tool ${tool.id}`}
+                className="w-full h-full object-cover transition-transform transform group-hover:scale-110"
+              />
             </div>
           ))}
         </div>

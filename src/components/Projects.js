@@ -1,54 +1,242 @@
-import React from 'react';
-import './Projects.css'; 
+import React from "react";
 
-const projects = [
-  {
-    id: 1,
-    link: "https://jhong1021.github.io/App-Building/",
-    imgSrc: "images/gunshop.png",
-    altText: "Gun Shop Website Static",
-    title: "Gun Shop Website Static",
-    description: `Guardian Guns is a static weapon shop website designed to showcase various firearms, including pistols and other weapons. The website provides a visually appealing and user-friendly interface where users can explore different gun models, view their specifications, and find pricing information.`
-  },
-  {
-    id: 2,
-    link: "https://movieclient-ja35.onrender.com/",
-    imgSrc: "images/movieapp.png",
-    altText: "Movie App Full Stack",
-    title: "Movie App Full Stack",
-    description: `MovieMaster Full Stack App is a comprehensive web application designed to manage and explore movies in a dynamic and interactive way. This full-stack application offers a range of features for users, admins, and guests, ensuring a seamless experience in movie management and exploration.`
-  },
-  {
-    id: 3,
-    link: "https://fitness-client-peg7.vercel.app/",
-    imgSrc: "images/fitness.png",
-    altText: "Project 3",
-    title: "Fitness App Fullstack",
-    description: `FitTrack Pro Full Stack App is a robust and interactive web application designed for fitness enthusiasts and health-conscious individuals. This full-stack application offers a comprehensive set of features for tracking workouts, managing fitness goals, and maintaining an active lifestyle.`
-  }
-];
-
-const ProjectsSection = () => {
+const Projects = () => {
   return (
-    <section id="projects" className="projects-section">
-      <div className="container">
-        <h2 className="section-heading">Projects</h2>
-        <div className="row">
-          {projects.map(project => (
-            <div key={project.id} className="col-md-4">
-              <div className="project-item">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                  <img src={project.imgSrc} alt={project.altText} className="img-fluid" />
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+    <section
+      id="projects"
+      className="py-16 h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white"
+    >
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Project 1 */}
+          <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            <img
+              alt="Project Image 1"
+              src="/images/carrent.png"
+              className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+            <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
+              <div>
+                <time datetime="2022-10-10" className="block text-xs">
+                  9th Aug 2024
+                </time>
+                <a>
+                  <h3 className="mt-0.5 text-lg font-semibold">
+                    Car Rental Website
+                  </h3>
+                </a>
+                <p className="mt-2 line-clamp-3 text-sm/relaxed">
+                  This project is a fully responsive car rental website designed to provide users with a seamless and efficient experience when booking rental vehicles. The website features a sleek, modern design with intuitive navigation, allowing users to easily explore available vehicles, view details.
+                </p>
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="https://car-rental-beta-lilac.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"
+                >
+                  Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Jhong1021/Car-Rental"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600"
+                >
+                  Code
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
-          ))}
+          </article>
+
+          {/* Project 2 */}
+          <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            <img
+              alt="Project Image 2"
+              src="/images/shopping cart.png"
+              className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+            <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
+              <div>
+                <time datetime="2023-01-15" className="block text-xs">
+                  13th Aug 2024
+                </time>
+                <a>
+                  <h3 className="mt-0.5 text-lg font-semibold">
+                    Shopping Checkout
+                  </h3>
+                </a>
+                <p className="mt-2 line-clamp-3 text-sm/relaxed">
+                  This project is an E-Commerce Checkout Application built with React. It provides a seamless shopping experience, allowing users to browse products, add them to their cart, and proceed to checkout. The application showcases modern web development techniques and leverages various technologies to deliver a smooth, interactive user experience.
+                </p>
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="https://shopping-checkout-react-q7hgawa5c-joenetuban-gmailcoms-projects.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"
+                >
+                  Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Jhong1021/Shopping-Checkout-React"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600"
+                >
+                  Code
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* Project 3 */}
+          <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            <img
+              alt="Project Image 3"
+              src="/images/fitnessapp.png"
+              className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+            <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
+              <div>
+                <time datetime="2023-05-25" className="block text-xs">
+                  15th Aug 2024
+                </time>
+                <a>
+                  <h3 className="mt-0.5 text-lg font-semibold">
+                    Fitness Tracking App
+                  </h3>
+                </a>
+                <p className="mt-2 line-clamp-3 text-sm/relaxed">
+                  This project is a comprehensive fitness tracking application designed to help users monitor their exercise routines and track progress. It offers features such as workout logging, progress tracking, and performance analytics, making it a valuable tool for fitness enthusiasts aiming to achieve their health and fitness goals.
+                </p>
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="https://fitness-tracking-app.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"
+                >
+                  Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Jhong1021/Fitness-Tracking-App"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600"
+                >
+                  Code
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   );
 };
 
-export default ProjectsSection;
+export default Projects;

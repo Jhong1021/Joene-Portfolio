@@ -1,65 +1,121 @@
-/* src/components/Navbar.css */
-
+/* General Navbar Styling */
 .navbar {
-    background-color: #28282b !important;
-    color: white !important;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar:hover {
-    background-color: #333 !important;
-  }
-  
-  .navbar .navbar-brand {
-    color: white !important;
-    font-weight: bold !important;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .navbar .navbar-brand:hover {
-    transform: scale(1.05);
-    color: #f8f9fa !important;
-  }
-  
-  .navbar .nav-link {
-    color: white !important;
-    font-weight: bold !important;
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .navbar .nav-link:hover {
-    color: #c5a61d !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
-  }
-  
-  .navbar-toggler-icon {
-    background-color: white !important;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar-toggler:hover .navbar-toggler-icon {
-    background-color: #007bff !important;
-  }
-  
-  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1030;
-  }
-  
-  .nav-link.btn {
-    color: #fff; /* White text color */
-    background-color: #007bff; /* Blue background color */
-    border-radius: 4px;
-    padding: 8px 16px; /* Adjust padding if necessary */
-    text-align: center;
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure proper spacing */
-  }
-  
-  .nav-link.btn:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
-  }
+    z-index: 1000;
+    color: white;
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    max-height: 100%;
+}
+
+/* Center the navigation menu items */
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    /* Allows the menu to take available space */
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Social icons styling */
+.navbar-social {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-social a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+/* Navbar actions styling */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar-menu.active ul {
+        display: flex;
+    }
+
+    .navbar-social {
+        display: none;
+    }
+}
+
+/* Dark mode styles */
+.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark .navbar {
+    background-color: rgba(18, 18, 18, 0.8);
+}
+
+.dark .navbar-menu ul li a {
+    color: #ffffff;
+}
+
+.dark .navbar-social a {
+    color: #ffffff;
+}
