@@ -168,7 +168,7 @@ const Projects = () => {
                         />
                         <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
                             <div>
-                                <time datetime="2023-05-25" className="block text-xs">
+                                <time datetime="2024-02-20" className="block text-xs">
                                     15th Aug 2024
                                 </time>
                                 <a>
@@ -177,7 +177,7 @@ const Projects = () => {
                                     </h3>
                                 </a>
                                 <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                                    This project is a comprehensive fitness tracking application designed to help users monitor their exercise routines and track progress. It offers features such as workout logging, progress tracking, and performance analytics, making it a valuable tool for fitness enthusiasts aiming to achieve their health and fitness goals.
+                                    This is a comprehensive fitness tracking application built with modern web technologies. It allows users to log their workouts, track progress, and set fitness goals. The app provides an intuitive interface and visualizations to help users stay motivated and on track with their fitness journey.
                                 </p>
                             </div>
                             <div className="mt-4 flex gap-4">

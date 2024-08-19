@@ -1,0 +1,29 @@
+/* Default light theme styles */
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.text-gray-900 {
+  color: #111827;
+}
+
+/* Dark theme styles */
+.dark .bg-gray-900 {
+  background-color: #111827;
+}
+
+.dark .text-white {
+  color: #ffffff;
+}
+
+.dark .bg-gray-700 {
+  background-color: #374151;
+}
+
+.dark .bg-gray-800 {
+  background-color: #1f2937;
+}
+
+.dark .text-gray-300 {
+  color: #d1d5db;
+}
