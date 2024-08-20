@@ -1,14 +1,14 @@
 import React from "react";
 import Swal from "sweetalert2";
-import "./TypeWriter.css"; // Ensure this file exists and contains typewriter effect styles
+import "./TypeWriter.css";
 
 const handleDownload = (e) => {
     e.preventDefault();
 
     try {
         const link = document.createElement("a");
-        link.href = "/images/Joene_Tuban_Resume.pdf"; // Ensure this path is correct
-        link.download = "Joene_Tuban_Resume.pdf";
+        link.href = "/images/Joene Tuban Resume.pdf";
+        link.download = "Joene Tuban Resume.pdf";
 
         // Append to the document and trigger the download
         document.body.appendChild(link);
