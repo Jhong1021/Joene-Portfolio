@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-/* index.css or global.css */
-body {
-  transition: background-color 0.3s, color 0.3s;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* Dark mode styles */
-.dark body {
-  background-color: #1a202c;
-  /* Dark background color */
-  color: #e2e8f0;
-  /* Light text color */
-=======
 /* index.css */
 html {
   --bg-color: white;
@@ -36,6 +18,7 @@ html.dark {
 }
 
 body {
+  transition: background-color 0.3s, color 0.3s;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -44,5 +27,4 @@ body {
 .project-card {
   background-color: var(--bg-color);
   color: var(--text-color);
->>>>>>> 860d077ad12e086a8eb55c502443a4f603030ec5
 }

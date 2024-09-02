@@ -1,24 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "2nd-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@heroicons/react": "^1.0.6",
-    "@tabler/icons-react": "^3.12.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.3.24",
-    "phosphor-react": "^1.4.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "react-router-dom": "^6.26.0",
-=======
   "name": "web-port",
   "version": "0.1.0",
   "private": true,
@@ -34,18 +14,13 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.1",
->>>>>>> 860d077ad12e086a8eb55c502443a4f603030ec5
     "react-scripts": "5.0.1",
     "sweetalert2": "^11.12.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-<<<<<<< HEAD
-    "build": "react-scripts build && postcss src/index.css -o src/tailwind.output.css",
-=======
     "build": "react-scripts build",
->>>>>>> 860d077ad12e086a8eb55c502443a4f603030ec5
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -70,10 +45,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
-<<<<<<< HEAD
-    "tailwindcss": "^3.4.9"
-=======
     "tailwindcss": "^3.4.10"
->>>>>>> 860d077ad12e086a8eb55c502443a4f603030ec5
   }
 }
