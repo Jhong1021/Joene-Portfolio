@@ -16,7 +16,7 @@ const App = () => {
       <Home />
       <Projects />
       <About />
-      <Skills /> {/* Replaced Tools with Skills */}
+      <Skills />
       <Contact />
       <Footer />
     </div>

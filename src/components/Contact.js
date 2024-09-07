@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative flex flex-wrap lg:h-screen lg:items-center"
+      className="relative flex flex-wrap lg:h-screen lg:items-center overflow-hidden" // Added overflow-hidden here
     >
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
@@ -168,7 +168,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="relative h-screen w-full lg:w-1/2 lg:h-full">
+      <div className="relative h-screen w-full lg:w-1/2 lg:h-full overflow-hidden"> {/* Added overflow-hidden here */}
         <img
           alt=""
           src="https://i.pinimg.com/564x/41/fa/a3/41faa3508a7b1210a03d8b6265ed7848.jpg"

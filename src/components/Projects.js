@@ -4,10 +4,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-16 h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white"
+      className="py-16 min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Project 1 */}
           <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
@@ -18,17 +18,34 @@ const Projects = () => {
             />
             <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
               <div>
-                <time datetime="2022-10-10" className="block text-xs">
+                <time dateTime="2022-10-10" className="block text-xs">
                   9th Aug 2024
                 </time>
-                <a>
+                <a href="#">
                   <h3 className="mt-0.5 text-lg font-semibold">
                     Car Rental Website
                   </h3>
                 </a>
                 <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                  This project is a fully responsive car rental website designed to provide users with a seamless and efficient experience when booking rental vehicles. The website features a sleek, modern design with intuitive navigation, allowing users to easily explore available vehicles and view details.
+                  A responsive car rental website offering a seamless booking experience with modern design.
                 </p>
+                <div className="flex space-x-2">
+                  <img
+                    alt="HTML"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="Tailwind"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="react"
+                    src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                </div>
               </div>
               <div className="mt-4 flex gap-4">
                 <a
@@ -102,8 +119,27 @@ const Projects = () => {
                   </h3>
                 </a>
                 <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                  This project is an E-Commerce Checkout Application built with React. It provides a seamless shopping experience, allowing users to browse products, add them to their cart, and proceed to checkout. The application showcases modern web development techniques and leverages various technologies to deliver a smooth, interactive user experience.
+                  This React-based E-Commerce Checkout app offers a seamless shopping experience, allowing users to browse, add products to their cart, and checkout. It highlights modern web development techniques for a smooth, interactive user experience.
                 </p>
+
+                <div className="flex space-x-2">
+                  <img
+                    alt="CSS"
+                    src="https://img.icons8.com/fluent/200/css3.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="JavaScript"
+                    src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="react"
+                    src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                </div>
+
               </div>
               <div className="mt-4 flex gap-4">
                 <a

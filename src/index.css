@@ -4,9 +4,9 @@
 
 /* index.css */
 html {
+  scroll-behavior: smooth;
   --bg-color: white;
   --text-color: black;
-  /* other light mode variables */
 }
 
 html.dark {

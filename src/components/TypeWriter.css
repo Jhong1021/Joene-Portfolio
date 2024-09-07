@@ -31,3 +31,51 @@
     animation: typing 4s steps(40, end) infinite,
         blink-caret .75s step-end infinite;
 }
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Wave with staggered animation delays */
+.wave-1 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.wave-3 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+.wave-4 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+.wave-5 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+.wave-6 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.wave-7 {
+    animation: wave 1.5s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
