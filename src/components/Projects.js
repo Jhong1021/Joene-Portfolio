@@ -26,9 +26,7 @@ const Projects = () => {
                     Car Rental Website
                   </h3>
                 </a>
-                <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                  A responsive car rental website offering a seamless booking experience with modern design.
-                </p>
+
                 <div className="flex space-x-2">
                   <img
                     alt="HTML"
@@ -118,9 +116,7 @@ const Projects = () => {
                     Shopping Checkout
                   </h3>
                 </a>
-                <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                  This React-based E-Commerce Checkout app offers a seamless shopping experience, allowing users to browse, add products to their cart, and checkout. It highlights modern web development techniques for a smooth, interactive user experience.
-                </p>
+
 
                 <div className="flex space-x-2">
                   <img
@@ -199,7 +195,7 @@ const Projects = () => {
           <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
             <img
               alt="Project Image 3"
-              src="/images/fitnessapp.png"
+              src="/images/gunshop.png"
               className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
             />
             <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
@@ -209,16 +205,229 @@ const Projects = () => {
                 </time>
                 <a>
                   <h3 className="mt-0.5 text-lg font-semibold">
-                    Fitness Tracker
+                    Gun Shop
                   </h3>
                 </a>
-                <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                  This Fitness Tracker application helps users monitor and analyze their workout progress over time. It provides features for logging workouts, tracking progress, and analyzing performance metrics. The application is designed with a focus on usability and provides insightful data to help users achieve their fitness goals.
-                </p>
+
+                <div className="flex space-x-2">
+                  <img
+                    alt="HTML"
+                    src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-html-5-icon.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="CSS"
+                    src="https://img.icons8.com/fluent/200/css3.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                </div>
+
               </div>
               <div className="mt-4 flex gap-4">
                 <a
-                  href="https://fitness-tracker-react-xyz.vercel.app/"
+                  href="https://jhong1021.github.io/Gun-Shop/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"
+                >
+                  Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Jhong1021/Gun-Shop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600"
+                >
+                  Code
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* Project 4 */}
+          <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            <img
+              alt="Project Image 3"
+              src="/images/todo list.png"
+              className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+            <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
+              <div>
+                <time datetime="2023-05-25" className="block text-xs">
+                  31th Aug 2024
+                </time>
+                <a>
+                  <h3 className="mt-0.5 text-lg font-semibold">
+                    Todo List App
+                  </h3>
+                </a>
+
+                <div className="flex space-x-2">
+                  <img
+                    alt="CSS"
+                    src="https://img.icons8.com/fluent/200/css3.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="Bootstrap"
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="JavaScript"
+                    src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="react"
+                    src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                </div>
+
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="https://todo-list-app-tau-eight.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"
+                >
+                  Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Jhong1021/Todo-List-App"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600"
+                >
+                  Code
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* Project 5 */}
+          <article className="flex flex-col overflow-hidden rounded-lg shadow transition-transform duration-300 hover:scale-105 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600">
+            <img
+              alt="Project Image 3"
+              src="/images/fitnessapp.png"
+              className="h-56 w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+            />
+            <div className="flex flex-col justify-between p-4 sm:p-6 flex-1 bg-white dark:bg-gray-900">
+              <div>
+                <time datetime="2023-05-25" className="block text-xs">
+                  5th Sep 2024
+                </time>
+                <a>
+                  <h3 className="mt-0.5 text-lg font-semibold">
+                    Todo List App
+                  </h3>
+                </a>
+
+                <div className="flex space-x-2">
+                  <img
+                    alt="CSS"
+                    src="https://img.icons8.com/fluent/200/css3.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="Bootstrap"
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="JavaScript"
+                    src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="nodejs"
+                    src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="mongoDB"
+                    src="https://cdn.iconscout.com/icon/free/png-256/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175140.png?f=webp"
+                    className="h-9 w-9 mt-4"
+                  />
+                  <img
+                    alt="react"
+                    src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+                    className="h-9 w-9 mt-4"
+                  />
+                </div>
+
+              </div>
+              <div className="mt-4 flex gap-4">
+                <a
+                  href="https://fitness-tracker-psi-wheat.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-red-700"

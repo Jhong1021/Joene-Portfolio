@@ -7,8 +7,8 @@ const handleDownload = (e) => {
 
   try {
     const link = document.createElement("a");
-    link.href = "/images/Joene Tuban Resume.pdf";
-    link.download = "Joene_Tuban_Resume.pdf";
+    link.href = "/images/Portfolio resume.pdf";
+    link.download = "Joene Tuban Resume.pdf";
 
     // Append to the document and trigger the download
     document.body.appendChild(link);
@@ -144,7 +144,7 @@ const Home = () => {
             {/* Tech Stack Section */}
             <div className="mt-12 lg:mt-8 flex flex-col items-center lg:items-start text-center lg:text-left lg:flex-row lg:gap-4 lg:justify-start">
               {/* Techstack Title */}
-              <h2 className="text-2xl font-bold text-white mb-6 lg:mb-0">Techstack:</h2>
+              <h2 className="text-2xl font-bold text-white mb-6 lg:mb-0">Tech Stack:</h2>
               <div className="flex flex-wrap justify-center gap-4 sm:flex-col sm:items-center lg:flex-row lg:gap-4">
                 <a className="transition-transform duration-200 hover:scale-110 wave-1">
                   <img
