@@ -387,7 +387,7 @@ const Projects = () => {
                 </time>
                 <a>
                   <h3 className="mt-0.5 text-lg font-semibold">
-                    Todo List App
+                    Fitness Tracker App
                   </h3>
                 </a>
 
