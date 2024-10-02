@@ -11,7 +11,27 @@
     width: 100%;
     z-index: 1000;
     color: white;
+    transition: all 0.3s ease;
 }
+
+/* Apply rounded corners and padding when scrolled */
+.navbar.scrolled {
+    border-radius: 30px;
+    margin-left: 20px;
+    /* Add margin on the left */
+    margin-right: 20px;
+    /* Add margin on the right */
+    margin-top: 5px;
+    /* Add margin on top */
+    width: calc(100% - 40px);
+    /* Ensure the navbar width adjusts with the margins */
+    padding: 0.75rem 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
 
 .navbar-brand a {
     font-size: 1.5rem;
@@ -30,7 +50,6 @@
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    /* Allows the menu to take available space */
 }
 
 .navbar-menu ul {
@@ -45,6 +64,16 @@
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition for zoom effect */
+}
+
+/* Hover effect for zoom */
+.navbar-menu ul li a:hover {
+    transform: scale(1.2);
+    /* Zoom the link */
+    color: #f39c12;
+    /* Optional: Change color on hover */
 }
 
 /* Social icons styling */
@@ -57,6 +86,16 @@
     color: white;
     margin-left: 1rem;
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition for zoom effect */
+}
+
+/* Hover effect for social icons zoom */
+.navbar-social a:hover {
+    transform: scale(1.2);
+    /* Zoom the icon */
+    color: #f39c12;
+    /* Optional: Change color on hover */
 }
 
 /* Navbar actions styling */

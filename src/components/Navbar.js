@@ -4,6 +4,7 @@ import './Navbar.css';
 const Navbar = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         // Load the user's preference from localStorage
@@ -25,8 +26,21 @@ const Navbar = () => {
         setDarkMode(!darkMode);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header className="navbar">
+        <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-brand">
                 <a>
                     <img src="/images/logo2.png" alt="My Logo" className="navbar-logo" />

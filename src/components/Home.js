@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import "./TypeWriter.css";
+import "./Homes.css";
 
 const handleDownload = (e) => {
   e.preventDefault();
@@ -46,16 +47,18 @@ const Home = () => {
       id="home"
       className="relative bg-gray-50 min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/blobbg.png')",
+        backgroundImage: "url('/images/ako.png')",
       }}
     >
-      <div className="absolute inset-0"></div>
-      <div className="relative mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+      {/* Add the background overlay here */}
+      <div className="background-overlay"></div>
+
+      <div className="relative z-10 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-start">
         {/* Main Flex Container */}
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full">
+        <div className="flex flex-col lg:flex-row justify-start items-start mt-20">
           {/* Left Side: Text content */}
           <div
-            className={`mx-auto max-w-xl text-center lg:text-left text-white relative transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100" : "opacity-0"
+            className={`mx-auto max-w-xl text-left lg:text-left text-white relative transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100" : "opacity-0"
               }`}
           >
             <h1 className="text-3xl font-extrabold sm:text-5xl">
@@ -67,13 +70,10 @@ const Home = () => {
             </h1>
 
             <p className="mt-4 sm:text-xl leading-relaxed">
-              Hello! I'm Joene Tuban, a passionate Front-end Developer who loves
-              creating interactive web experiences. With expertise in modern
-              technologies and a keen eye for design, I build user-friendly
-              solutions that look great and work seamlessly.
+              Hi! I'm Joene Tuban, a Front-end Developer who creates seamless, user-friendly, and visually appealing web experiences.
             </p>
 
-            <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-4">
+            <div className="mt-5 flex flex-wrap justify-start gap-4">
               <a
                 href="https://www.facebook.com/joene.tuban?mibextid=LQQJ4d"
                 target="_blank"
@@ -124,7 +124,7 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+            <div className="mt-8 flex justify-start gap-4">
               <a
                 className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                 href="#"
@@ -142,10 +142,10 @@ const Home = () => {
             </div>
 
             {/* Tech Stack Section */}
-            <div className="mt-12 lg:mt-8 flex flex-col items-center lg:items-start text-center lg:text-left lg:flex-row lg:gap-4 lg:justify-start">
+            <div className="mt-12 lg:mt-8 flex flex-col items-start lg:flex-row lg:gap-4 lg:justify-start">
               {/* Techstack Title */}
               <h2 className="text-2xl font-bold text-white mb-6 lg:mb-0">Tech Stack:</h2>
-              <div className="flex flex-wrap justify-center gap-4 sm:flex-col sm:items-center lg:flex-row lg:gap-4">
+              <div className="flex flex-wrap justify-start gap-4 sm:flex-col sm:items-start lg:flex-row lg:gap-4">
                 <a className="transition-transform duration-200 hover:scale-110 wave-1">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
@@ -197,22 +197,6 @@ const Home = () => {
                 </a>
               </div>
             </div>
-          </div>
-
-          {/* Right Side: Image */}
-          <div className="overflow-hidden mt-12 lg:mt-0 lg:ml-12 max-w-full">
-            {/* Large Screen Image */}
-            <img
-              src="/images/contactme2.jpg"
-              alt="Placeholder for additional content"
-              className="hidden lg:block w-full h-auto max-w-xs lg:max-w-sm rounded-lg"
-            />
-            {/* Small Screen Image */}
-            <img
-              src="/images/smallscreen.jpg"
-              alt="Profile Picture"
-              className="block lg:hidden w-40 h-40 rounded-full object-cover"
-            />
           </div>
         </div>
       </div>
