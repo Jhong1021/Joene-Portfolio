@@ -1,42 +1,29 @@
-import React from "react";
+import React from 'react';
+import './About.css';
 
 const About = () => {
   return (
-    <section id="about" className="h-screen flex items-center pt-2">
-      <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="bg-blue-600 p-8 md:p-12 lg:px-16 lg:py-24 flex flex-col justify-center">
-            <div className="mx-auto max-w-xl text-center">
-              <h2 className="text-2xl font-bold text-white md:text-3xl">
-                I am a highly dedicated individual with an unwavering commitment to delivering excellence in every task I undertake.
-              </h2>
-
-              <p className="hidden text-white/90 sm:mt-4 sm:block">
-                I’m really passionate about web development, and I’m always looking for ways to learn more and improve. I enjoy staying up-to-date with the latest trends and technologies.
-              </p>
-
-              <div className="mt-4 md:mt-8">
-                <button
-                  className="inline-block rounded border border-white bg-white px-12 py-3 text-sm font-medium text-blue-500 transition hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:ring-yellow-400"
-                >
-                  Get Started Today
-                </button>
-              </div>
-            </div>
+    <section id="about" className="about">
+      <div className="container">
+        <div className="about-content">
+          {/* Left side: Self Introduction and Personal Info */}
+          <div className="about-image">
+            <img src="images/contactme2.jpg" alt="Profile" />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <img
-              alt=""
-              src="/images/aboutme.jpg"
-              className="h-40 w-full object-cover sm:h-56 md:h-full transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
-            />
-
-            <img
-              alt=""
-              src="/images/contactme2.jpg"
-              className="h-40 w-full object-cover sm:h-56 md:h-full transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
-            />
+          {/* Right side: Profile Image */}
+          <div className="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hello! I'm Joene Tuban, a passionate front-end developer with experience in creating beautiful, user-friendly websites. I love transforming designs into interactive digital experiences.
+            </p>
+            <p>
+              I enjoy working with technologies like React, JavaScript, HTML5, CSS3, and TailwindCSS to bring web projects to life.
+            </p>
+            <div className="personal-info">
+              <p><strong>Cellphone No:</strong> 0956-027-3240</p>
+              <p><strong>Email:</strong> joenetuban@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>

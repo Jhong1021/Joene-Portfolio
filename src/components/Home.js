@@ -124,22 +124,23 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="mt-8 flex justify-start gap-4">
+            <div className="mt-8 flex sm:flex-row flex-col justify-start gap-4">
               <a
-                className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                className="block w-full sm:w-auto rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 text-center"
                 href="#"
                 onClick={handleDownload}
               >
-                Download CV
+                Download Resume
               </a>
 
               <a
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                className="block w-full sm:w-auto rounded bg-white px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 text-center"
                 href="#contact"
               >
                 Contact Me
               </a>
             </div>
+
 
             {/* Tech Stack Section */}
             <div className="mt-12 lg:mt-8 flex flex-col items-start lg:flex-row lg:gap-4 lg:justify-start">

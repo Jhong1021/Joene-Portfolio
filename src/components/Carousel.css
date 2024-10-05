@@ -1,0 +1,64 @@
+/* Reset styles specific to the carousel component */
+.carousel-container * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    /* Hide overflowing content */
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.scroll-container {
+    height: 200px;
+    /* Set a fixed height */
+    position: relative;
+    overflow: hidden;
+    /* Ensure overflow is hidden */
+}
+
+.carousel {
+    display: flex;
+    animation: scroll-horizontal 60s linear infinite;
+    /* Adjust duration for scrolling speed */
+}
+
+.carousel img {
+    width: 300px;
+    /* Set a fixed width */
+    height: auto;
+    /* Keep aspect ratio */
+    border-radius: 14px;
+    margin-left: 20px;
+    /* Space between images */
+    transition: transform 0.3s ease;
+    /* Transition for zoom effect */
+}
+
+/* Keyframes for infinite scrolling effect */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+        /* Start from the initial position */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move to the left by 100% of the width */
+    }
+}
+
+/* Zoom effect on hover */
+.carousel img:hover {
+    transform: scale(1.1);
+}

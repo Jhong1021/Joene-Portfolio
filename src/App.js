@@ -3,9 +3,11 @@ import './App.css';
 import './index.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Projects from './components/Projects';
+// import Projects from './components/Projects';
 import About from './components/About';
-import Skills from './components/Skills';
+import Portfolio from './components/Portfolio';
+import Carousel from './components/Carousel';
+// import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -14,9 +16,11 @@ const App = () => {
     <div>
       <Navbar />
       <Home />
-      <Projects />
+      {/* <Projects /> */}
       <About />
-      <Skills />
+      <Portfolio />
+      <Carousel />
+      {/* <Skills /> */}
       <Contact />
       <Footer />
     </div>

@@ -1,0 +1,81 @@
+/* Container styling for portfolio items */
+.isotope .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Darken the image and apply zoom effect on hover */
+.isotope .item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    /* Smooth zoom and darkening */
+}
+
+.isotope .item:hover img {
+    transform: scale(1.1);
+    /* Subtle zoom effect */
+    filter: brightness(0.6);
+    /* Darken the image */
+}
+
+/* Overlay content styling */
+.isotope-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.isotope .item:hover .isotope-overlay {
+    opacity: 1;
+    /* Show overlay content on hover */
+}
+
+/* Overlay text and icons centered */
+.isotope-overlay a {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* Space between title and icons */
+    text-align: center;
+    padding: 8px 12px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.isotope-overlay a:hover {
+    color: #212121;
+    background-color: #fff;
+}
+
+/* Icon styles */
+.overlay-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Space between icons */
+}
+
+.icon {
+    color: #fff;
+    font-size: 24px;
+    /* Size of icons */
+    transition: color 0.25s ease-in-out;
+}
+
+.icon:hover {
+    color: #FFD700;
+    /* Gold color on hover */
+}

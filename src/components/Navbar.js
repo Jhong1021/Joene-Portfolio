@@ -56,11 +56,6 @@ const Navbar = () => {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div className="navbar-social">
-                <a href="#"><i className="fab fa-facebook"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-            </div>
             <div className="navbar-actions">
                 <button className="navbar-toggle" onClick={toggleMenu}>
                     ☰
