@@ -79,3 +79,60 @@
     color: #FFD700;
     /* Gold color on hover */
 }
+
+/* Portfolio.css */
+
+/* Section heading styling */
+.portfolio-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 3px solid #000000;
+    /* Custom underline */
+    display: inline-block;
+    /* Ensure underline doesn't span the full width */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+
+    /* Adjust grid for larger screens */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust grid for tablets */
+    .grid {
+        grid-template-columns: 1fr;
+        /* 1 column on smaller screens */
+        grid-template-rows: auto;
+        /* Reset rows for smaller screens */
+    }
+
+    .portfolio-heading {
+        font-size: 28px;
+        /* Smaller heading size for mobile */
+    }
+
+    .overlay-icons .icon {
+        font-size: 20px;
+        /* Smaller icon size for mobile */
+    }
+}
+
+/* Further adjustments for very small screens, if needed */
+@media (max-width: 480px) {
+    .portfolio-heading {
+        font-size: 24px;
+        /* Even smaller heading size for very small devices */
+    }
+
+    .overlay-icons .icon {
+        font-size: 18px;
+        /* Smaller icon size for very small devices */
+    }
+}

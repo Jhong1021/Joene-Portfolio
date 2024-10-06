@@ -1,28 +1,31 @@
 import React from 'react';
-import './About.css';
 
 const About = () => {
   return (
-    <section id="about" className="about">
-      <div className="container">
-        <div className="about-content">
-          {/* Left side: Self Introduction and Personal Info */}
-          <div className="about-image">
-            <img src="images/contactme2.jpg" alt="Profile" />
+    <section id="about" className="about min-h-screen flex justify-center items-center bg-white dark:bg-gray-900 py-6">
+      <div className="container max-w-5xl mx-auto flex flex-wrap justify-between items-center px-4">
+        <div className="about-content flex flex-wrap justify-between items-center">
+          {/* Left side: Profile Image */}
+          <div className="about-image flex justify-center items-center mb-6 lg:mb-0 lg:w-1/2 px-4">
+            <img
+              src="images/contactme2.jpg"
+              alt="Profile"
+              className="w-full max-w-xs h-auto object-cover shadow-lg"
+            />
           </div>
 
-          {/* Right side: Profile Image */}
-          <div className="about-text">
-            <h2>About Me</h2>
-            <p>
+          {/* Right side: Self Introduction and Personal Info */}
+          <div className="about-text lg:w-1/2 px-4">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">About Me</h2>
+            <p className="mb-4 text-gray-600 dark:text-gray-300">
               Hello! I'm Joene Tuban, a passionate front-end developer with experience in creating beautiful, user-friendly websites. I love transforming designs into interactive digital experiences.
             </p>
-            <p>
+            <p className="mb-4 text-gray-600 dark:text-gray-300">
               I enjoy working with technologies like React, JavaScript, HTML5, CSS3, and TailwindCSS to bring web projects to life.
             </p>
             <div className="personal-info">
-              <p><strong>Cellphone No:</strong> 0956-027-3240</p>
-              <p><strong>Email:</strong> joenetuban@gmail.com</p>
+              <p className="text-gray-700 dark:text-gray-400"><strong>Cellphone No:</strong> 0956-027-3240</p>
+              <p className="text-gray-700 dark:text-gray-400"><strong>Email:</strong> joenetuban@gmail.com</p>
             </div>
           </div>
         </div>

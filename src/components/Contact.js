@@ -160,7 +160,7 @@ const Contact = () => {
           <div className="flex items-center justify-end">
             <button
               type="submit"
-              className="w-full inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+              className="w-full inline-block rounded-lg bg-[#207bff] px-5 py-3 text-sm font-medium text-white"
             >
               Send Message
             </button>

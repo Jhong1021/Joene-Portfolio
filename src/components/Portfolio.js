@@ -7,7 +7,8 @@ const Portfolio = () => {
         <section id="projects" className="portfolio py-20">
             <div className="portfolio-details">
                 <div className="section-heading text-center mb-10">
-                    <h2 className="text-2xl font-bold">My Recent Works</h2>
+                    <h2 className='portfolio-heading text-3xl font-bold mb-4 text-gray-900 dark:text-white'>My Recent Works</h2>
+
                 </div>
                 <div className="container mx-auto">
                     {/* Updated grid layout */}
