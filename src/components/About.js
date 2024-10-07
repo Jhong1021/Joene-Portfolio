@@ -3,15 +3,67 @@ import React from 'react';
 const About = () => {
   return (
     <section id="about" className="about min-h-screen flex justify-center items-center bg-white dark:bg-gray-900 py-6">
-      <div className="container max-w-5xl mx-auto flex flex-wrap justify-between items-center px-4">
-        <div className="about-content flex flex-wrap justify-between items-center">
+      <div className="container max-w-5xl mx-auto flex flex-wrap justify-center lg:justify-between items-center px-4">
+        <div className="about-content flex flex-wrap justify-center items-center lg:justify-between">
+
           {/* Left side: Profile Image */}
-          <div className="about-image flex justify-center items-center mb-6 lg:mb-0 lg:w-1/2 px-4">
+          <div className="about-image flex flex-col justify-center items-center mb-6 lg:mb-0 lg:w-1/2 px-4">
             <img
               src="images/contactme2.jpg"
               alt="Profile"
               className="w-full max-w-xs h-auto object-cover shadow-lg"
             />
+            {/* Social media icons placed directly below the profile picture */}
+            <div className="mt-5 flex justify-center gap-4">
+              <a
+                href="https://www.facebook.com/joene.tuban?mibextid=LQQJ4d"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQKrFhY-ljA-u7J5IMWeTv8zmpBx4PP9nQMw&s"
+                  alt="Facebook"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a
+                href="https://github.com/Jhong1021"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="GitHub"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/joene.tuban?igsh=MWRpcm5rczQybHZtNw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                  alt="Instagram"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                  alt="LinkedIn"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Right side: Self Introduction and Personal Info */}

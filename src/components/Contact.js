@@ -1,10 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Simulate sending the form (you can replace this with your actual send logic)
+    setTimeout(() => {
+      Swal.fire({
+        title: "Message Sent!",
+        text: "Thank you for getting in touch. I will reply to you as soon as I can.",
+        icon: "success",
+        confirmButtonText: "Okay",
+      });
+
+      // Reset the form fields
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }, 500); // Mock a short delay
+  };
+
   return (
     <section
       id="contact"
-      className="relative flex flex-wrap lg:h-screen lg:items-center overflow-hidden" // Added overflow-hidden here
+      className="relative flex flex-wrap lg:h-screen lg:items-center overflow-hidden"
     >
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
@@ -19,6 +55,7 @@ const Contact = () => {
         <div className="mt-12 text-gray-500">
           <ul className="list-unstyled flex flex-col space-y-4">
             <li className="flex items-center space-x-2">
+              {/* Phone Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -36,6 +73,7 @@ const Contact = () => {
               <span>0956 027 3240</span>
             </li>
             <li className="flex items-center space-x-2">
+              {/* Email Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -53,6 +91,7 @@ const Contact = () => {
               <span>joenetuban@gmail.com</span>
             </li>
             <li className="flex items-center space-x-2">
+              {/* Location Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -78,7 +117,7 @@ const Contact = () => {
         </div>
 
         {/* Form */}
-        <form action="#" className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+        <form onSubmit={handleSubmit} className="mx-auto mb-0 mt-8 max-w-md space-y-4">
           <div>
             <label htmlFor="name" className="sr-only">
               Name
@@ -87,24 +126,12 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Your Name"
               />
-              <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="size-4 text-gray-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </span>
             </div>
           </div>
 
@@ -116,31 +143,12 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Your email"
               />
-              <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="size-4 text-gray-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              </span>
             </div>
           </div>
 
@@ -151,6 +159,9 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
               rows="4"
               placeholder="Your message"
@@ -168,7 +179,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="relative h-screen w-full lg:w-1/2 lg:h-full overflow-hidden"> {/* Added overflow-hidden here */}
+      <div className="relative h-screen w-full lg:w-1/2 lg:h-full overflow-hidden">
         <img
           alt=""
           src="https://i.pinimg.com/564x/41/fa/a3/41faa3508a7b1210a03d8b6265ed7848.jpg"
