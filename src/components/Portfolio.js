@@ -82,12 +82,12 @@ const Portfolio = () => {
                         <div className="item relative row-span-2 col-start-3 row-start-3">
                             <img src="images/fitnessapp.png" alt="portfolio image" className="portfolio-image" />
                             <div className="isotope-overlay flex items-center justify-center flex-col">
-                                <a href="#" className="text-white text-lg mb-2">Web Development</a>
+                                <a className="text-white text-lg mb-2">Fitness Tracker</a>
                                 <div className="overlay-icons">
-                                    <a href="#" className="icon mr-3">
+                                    <a href="https://fitness-tracker-psi-wheat.vercel.app/" target="_blank" rel="noopener noreferrer" className="icon mr-3">
                                         <i className="fas fa-eye"></i>
                                     </a>
-                                    <a href="#" className="icon">
+                                    <a href="https://github.com/Jhong1021/Fitness-Tracker" target="_blank" rel="noopener noreferrer" className="icon">
                                         <i className="fas fa-link"></i>
                                     </a>
                                 </div>
